@@ -2,7 +2,7 @@
 # Written by Lvmin Zhang
 # 2023 April
 # Stanford University
-# If you use this, please Cite "High Quality Edge Thinning using Pure Python", Lvmin Zhang, In Mikubill/startfk-controlnet.
+# If you use this, please Cite "High Quality Edge Thinning using Pure Python", Lvmin Zhang, In shinobu254/startfk-controlnet.
 
 
 import cv2

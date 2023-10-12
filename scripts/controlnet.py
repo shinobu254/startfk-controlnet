@@ -385,7 +385,7 @@ class Script(scripts.Script, metaclass=(
         unit.threshold_b = selector(p, "control_net_pthr_b", unit.threshold_b, idx)
         unit.guidance_start = selector(p, "control_net_guidance_start", unit.guidance_start, idx)
         unit.guidance_end = selector(p, "control_net_guidance_end", unit.guidance_end, idx)
-        # Backward compatibility. See https://github.com/Mikubill/startfk-controlnet/issues/1740
+        # Backward compatibility.
         # for more details.
         unit.guidance_end = selector(p, "control_net_guidance_strength", unit.guidance_end, idx)
         unit.control_mode = selector(p, "control_net_control_mode", unit.control_mode, idx)
@@ -973,7 +973,7 @@ class Script(scripts.Script, metaclass=(
         return getattr(p, 'refiner_checkpoint', None) is not None
 
     def process(self, p, *args, **kwargs):
-        if not self.process_has_sxdxl_refiner(p):
+        if not Script.process_has_sxdxl_refiner(p):
             self.controlnet_hack(p)
         return
 
@@ -983,7 +983,7 @@ class Script(scripts.Script, metaclass=(
                                    noise_modifier=self.noise_modifier,
                                    sd_model=p.sd_model)
         self.noise_modifier = None
-        if self.process_has_sxdxl_refiner(p):
+        if Script.process_has_sxdxl_refiner(p):
             self.controlnet_hack(p)
         return
 

@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 
 import importlib
-utils = importlib.import_module('extensions.startfk-controlnet.tests.utils', 'utils')
+utils = importlib.import_module('extensions.sd-startfk-controlnet.tests.utils', 'utils')
 utils.setup_test_env()
 
 from annotator.openpose.util import faceDetect, handDetect

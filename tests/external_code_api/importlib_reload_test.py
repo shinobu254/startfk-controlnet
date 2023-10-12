@@ -1,6 +1,6 @@
 import unittest
 import importlib
-utils = importlib.import_module('extensions.startfk-controlnet.tests.utils', 'utils')
+utils = importlib.import_module('extensions.sd-startfk-controlnet.tests.utils', 'utils')
 utils.setup_test_env()
 
 from scripts import external_code
@@ -16,7 +16,7 @@ class TestImportlibReload(unittest.TestCase):
         self.assertEqual(self.ControlNetUnit, NewControlNetUnit)
 
     def test_force_import_does_not_redefine(self):
-        external_code_copy = importlib.import_module('extensions.startfk-controlnet.scripts.external_code', 'external_code')
+        external_code_copy = importlib.import_module('extensions.sd-startfk-controlnet.scripts.external_code', 'external_code')
         self.assertEqual(self.ControlNetUnit, external_code_copy.ControlNetUnit)
 
 

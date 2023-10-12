@@ -5,7 +5,7 @@ from typing import Dict
 
 
 import importlib
-utils = importlib.import_module('extensions.startfk-controlnet.tests.utils', 'utils')
+utils = importlib.import_module('extensions.sd-startfk-controlnet.tests.utils', 'utils')
 utils.setup_test_env()
 
 from annotator.openpose import OpenposeDetector

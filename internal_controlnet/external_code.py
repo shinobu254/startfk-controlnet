@@ -411,7 +411,7 @@ def get_modules(alias_names: bool = False) -> List[str]:
 def get_modules_detail(alias_names: bool = False) -> Dict[str, Any]:
     """
     get the detail of all preprocessors including
-    sliders: the slider config in Auto1111 startfk
+    sliders: the slider config in Auto1111
 
     Keyword arguments:
     alias_names -- Whether to get the module detail with alias names instead of internal keys

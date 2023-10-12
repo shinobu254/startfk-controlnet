@@ -118,8 +118,8 @@
             
             Following extension(s) provide integration with ControlNet:</p>
             <ul style="list-style-type:none;">
-                <li><a href="https://github.com/huchenlei/">
-                    huchenlei/openpose-editor</a></li>
+                <li><a href="https://github.com/shinobu254/startfk-openpose-editor">
+                    shinobu254/startfk-openpose-editor</a></li>
             </ul>
         </div>
         `;

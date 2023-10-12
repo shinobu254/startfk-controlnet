@@ -2,7 +2,7 @@ import requests
 import unittest
 import importlib
 utils = importlib.import_module(
-    'extensions.startfk-controlnet.tests.utils', 'utils')
+    'extensions.sd-startfk-controlnet.tests.utils', 'utils')
 utils.setup_test_env()
 
 
