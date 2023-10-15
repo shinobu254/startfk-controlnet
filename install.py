@@ -1,4 +1,4 @@
-import launch
+import neko
 import os
 import pkg_resources
 from typing import Tuple, Optional
@@ -25,14 +25,14 @@ with open(req_file) as file:
                 package_name, package_version = package.split('==')
                 installed_version = get_installed_version(package_name)
                 if installed_version != package_version:
-                    launch.run_pip(f"install -U {package}", f"startfk-controlnet requirement: changing {package_name} version from {installed_version} to {package_version}")
+                    neko.run_pip(f"install -U {package}", f"startfk-controlnet requirement: changing {package_name} version from {installed_version} to {package_version}")
             elif '>=' in package:
                 package_name, package_version = package.split('>=')
                 installed_version = get_installed_version(package_name)
                 if not installed_version or comparable_version(installed_version) < comparable_version(package_version):
-                    launch.run_pip(f"install -U {package}", f"startfk-controlnet requirement: changing {package_name} version from {installed_version} to {package_version}")
-            elif not launch.is_installed(package):
-                launch.run_pip(f"install {package}", f"startfk-controlnet requirement: {package}")
+                    neko.run_pip(f"install -U {package}", f"startfk-controlnet requirement: changing {package_name} version from {installed_version} to {package_version}")
+            elif not neko.is_installed(package):
+                neko.run_pip(f"install {package}", f"startfk-controlnet requirement: {package}")
         except Exception as e:
             print(e)
             print(f'Warning: Failed to install {package}, some preprocessors may not work.')
